@@ -8,29 +8,32 @@
 </head>
 <body>
     <?php
-        $titoloCanzone = $_GET["titolo"];
-        $lenTitolo = strlen($titoloCanzone);
-        
+        $paragrafo = $_GET["testo"];
+        $lenParagrafo = strlen($paragrafo);
 
-        $strofaCanzone = $_GET["strofa"];
-        $lenStrofa = strlen($strofaCanzone);
+
+        $censura = $_GET["parolaCensurata"];
+        $nuovoParagrafo = str_replace($censura, "***" ,$paragrafo);
+        $lenParagrafoCensurato = strlen($nuovoParagrafo);
         
     ?>
 
-    <!-- strofa canzone e lunghezza caratteri -->
+    
+    <!-- paragrafo -->
     <div>
-        <h1>Strofa</h1>
-        <p><strong>La strofa della canzone è:</strong>  <?php echo $strofaCanzone ?> </p>
-        <p><strong>La lunghezza della strofa  è:</strong> <?php echo $lenStrofa ?> </p>
-    </div>
-
-    <!-- titolo della canzone nascosto/ da nascondere e lunghezza caratteri -->
-    <div>
-        <h1>Titolo</h1>
-        <p><strong>Il titolo della canzone è:</strong> <?php echo "***" ?> </p>
-        <p><strong>La lunghezza del Titolo è:</strong> <?php echo $lenTitolo ?> </p>
+        <h1>Paragrafo</h1>
+        <p><strong>Il paragrafo è:</strong> <?php echo $paragrafo ?> </p>
+        <p><strong>La lunghezza è:</strong> <?php echo $lenParagrafo ?> </p>
 
     </div>
+
+    <!-- paragrafo con parola censurata -->
+    <div>
+        <h1>paragrafo con censura</h1>
+        <p><strong>La strofa della canzone è:</strong>  <?php echo $nuovoParagrafo ?> </p>
+        <p><strong>La lunghezza del paragrafo censurato è:</strong> <?php echo $lenParagrafoCensurato ?> </p>
+    </div>
+
 
 </body>
 </html>

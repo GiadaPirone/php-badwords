@@ -10,8 +10,8 @@
 <body>
     <div>
         <form action="receiveData.php" method="GET">
-            <input type="hidden" name="titolo"  placeholder="Inserisci il titolo della canzone">
-            <textarea name="strofa" placeholder="Inserisci una strofa della tua canzone preferita" id="" cols="30" rows="10"></textarea>
+            <textarea name="testo" placeholder="Inserisci del testo" id="" cols="30" rows="10"></textarea>
+            <input type="text" name="parolaCensurata"  placeholder="Inserisci parola da censurare">
 
             <button type="submit">Invia</button>
         </form>
