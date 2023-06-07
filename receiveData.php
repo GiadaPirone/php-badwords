@@ -9,12 +9,13 @@
 <body>
     <?php
         $paragrafo = $_GET["testo"];
-        $lenParagrafo = strlen($paragrafo);
+        // $lenParagrafo = strlen($paragrafo);
+        $lenParagrafo = strlen(str_replace(" ","",$paragrafo));
 
 
         $censura = $_GET["parolaCensurata"];
         $nuovoParagrafo = str_replace($censura, "***" ,$paragrafo);
-        $lenParagrafoCensurato = strlen($nuovoParagrafo);
+        $lenParagrafoCensurato = strlen(str_replace( " ", "", $censura));
         
     ?>
 
@@ -31,7 +32,7 @@
     <div>
         <h1>paragrafo con censura</h1>
         <p><strong>La strofa della canzone è:</strong>  <?php echo $nuovoParagrafo ?> </p>
-        <p><strong>La lunghezza del paragrafo censurato è:</strong> <?php echo $lenParagrafoCensurato ?> </p>
+        <p><strong>La lunghezza della parola censurata è:</strong> <?php echo $lenParagrafoCensurato ?> </p>
     </div>
 
 
