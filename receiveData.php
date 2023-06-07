@@ -14,12 +14,12 @@
 
 
         $censura = $_GET["parolaCensurata"];
-        $nuovoParagrafo = str_replace($censura, "***" ,$paragrafo);
+        $nuovoParagrafo = str_ireplace($censura, "***" ,$paragrafo);
         $lenParagrafoCensurato = strlen(str_replace( " ", "", $censura));
         
     ?>
 
-    
+    i
     <!-- paragrafo -->
     <div>
         <h1>Paragrafo</h1>
