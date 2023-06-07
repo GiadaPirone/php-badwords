@@ -10,7 +10,7 @@
 <body>
     <div>
         <form action="receiveData.php" method="GET">
-            <input type="text" name="titolo" placeholder="Inserisci il titolo della canzone">
+            <input type="hidden" name="titolo"  placeholder="Inserisci il titolo della canzone">
             <textarea name="strofa" placeholder="Inserisci una strofa della tua canzone preferita" id="" cols="30" rows="10"></textarea>
 
             <button type="submit">Invia</button>

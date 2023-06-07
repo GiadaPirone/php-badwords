@@ -27,7 +27,7 @@
     <!-- titolo della canzone nascosto/ da nascondere e lunghezza caratteri -->
     <div>
         <h1>Titolo</h1>
-        <p><strong>Il titolo della canzone è:</strong> <?php echo $titoloCanzone ?> </p>
+        <p><strong>Il titolo della canzone è:</strong> <?php echo "***" ?> </p>
         <p><strong>La lunghezza del Titolo è:</strong> <?php echo $lenTitolo ?> </p>
 
     </div>
